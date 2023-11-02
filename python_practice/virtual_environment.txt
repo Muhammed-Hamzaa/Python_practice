@@ -1,0 +1,23 @@
+# Create a virtual environment (myenv--->folder name)
+python3 -m venv myenv
+
+# Activate the virtual environment (Linux/macOS)
+source myenv/bin/activate
+
+# Activate the virtual environment (Windows)
+myenv\Scripts\activate.bat
+
+# Activate the virtual environment (Windows powershell)
+myenv\Scripts\activate.ps1
+
+# Deactivate the virtual environment
+deactivate
+
+# Output the list of installed packages and their versions to a file
+pip freeze > requirements.txt
+
+# Install the packages listed in the requirements.txt file
+pip install -r requirements.txt
+
+import pandas as pd
+print(pd.__version__)
