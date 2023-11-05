@@ -9,7 +9,8 @@
 import hmz as h
 import math
 
-print(dir(math))
-print(math.nan, type(math.nan))
+# to show all the funtions in a specific module u have imported
+# print(dir(math))
+# print(math.nan, type(math.nan))
 h.welcome()
 print(h.hamza)
