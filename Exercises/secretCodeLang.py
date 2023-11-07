@@ -13,3 +13,44 @@
 
 # Program asks whether you want to code or decode
 
+import string
+import random
+
+#for 3 random letters
+# print("".join((random.choice(string.ascii_letters)) for x in range(3)))
+
+msg= input("Enter the message\n")
+quest=input(''' press 'e' for encoding the message 
+                 OR
+enter 'd' for decing the message\n ''')
+if (quest== "e"):
+    coding=True
+elif(quest== "d"):
+    coding=False
+else:
+    print("press e or d ")
+
+words=msg.split(" ")
+# print(words)
+new_words = [] 
+if (coding):
+    for word in words:
+        if(len(word)>=3):
+            r1= "".join((random.choice(string.ascii_letters)) for x in range(3))
+            r2= "".join((random.choice(string.ascii_letters)) for x in range(3))
+            new_word = r1 + word[1:] + word[0] + r2
+            new_words.append(new_word)
+        else:
+            new_words.append(word[::-1])
+    print(" ".join(new_words))
+else:
+    for word in words:
+        if(len(word)>=3):
+            new_word = word[-4] + word[3:-4]
+            new_words.append(new_word)
+        else:
+            new_words.append(word[::-1])
+    print(" ".join(new_words))
+
+
+
